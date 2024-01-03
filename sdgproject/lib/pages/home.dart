@@ -171,6 +171,10 @@ class PopupDialog extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
+                Text(
+                  'Carbon Footprint Statistics',
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                ),
                 IconButton(
                   icon: Icon(Icons.close),
                   onPressed: () {
@@ -179,10 +183,7 @@ class PopupDialog extends StatelessWidget {
                 ),
               ],
             ),
-            Text(
-              'Statistics',
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-            ),
+
             SizedBox(height: 16.0),
             // Bar Chart
             Container(
@@ -190,7 +191,7 @@ class PopupDialog extends StatelessWidget {
               child: BarChart(
                 BarChartData(
                   alignment: BarChartAlignment.spaceAround,
-                  maxY: 6,
+                  maxY: 10000,
                   barTouchData: BarTouchData(
                     touchTooltipData: BarTouchTooltipData(
                       tooltipBgColor: Colors.blueGrey,
@@ -207,23 +208,45 @@ class PopupDialog extends StatelessWidget {
                       x: 0,
                       barRods: [
                         BarChartRodData(
-                          toY: 3,
+                          toY: 800,
                           color: Colors.blue,
                         )
                       ],
                     ),
                     BarChartGroupData(
                       x: 1,
-                      barRods: [BarChartRodData(toY: 2, color: Colors.green)],
+                      barRods: [
+                        BarChartRodData(toY: 4600, color: Colors.green)
+                      ],
                     ),
                     BarChartGroupData(
                       x: 2,
-                      barRods: [BarChartRodData(toY: 5, color: Colors.orange)],
+                      barRods: [
+                        BarChartRodData(toY: 1200, color: Colors.orange)
+                      ],
                     ),
                   ],
                 ),
               ),
             ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 18,
+                ),
+                Text(
+                  "Global Average",
+                ),
+                SizedBox(
+                  width: 12,
+                ),
+                Text("You"),
+                SizedBox(
+                  width: 32,
+                ),
+                Text("Goal"),
+              ],
+            )
           ],
         ),
       ),

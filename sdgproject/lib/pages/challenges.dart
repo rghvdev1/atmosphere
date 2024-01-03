@@ -39,7 +39,7 @@ class _ChallengesState extends State<Challenges> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               height: 140,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -85,7 +85,7 @@ class _ChallengesState extends State<Challenges> {
                           builder: (context) => const Scaffold()));
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.purple,
+                      backgroundColor: Colors.purple,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -117,7 +117,7 @@ class _ChallengesState extends State<Challenges> {
                           builder: (context) => const Scaffold()));
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.blue,
+                      backgroundColor: Colors.blue,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -149,7 +149,7 @@ class _ChallengesState extends State<Challenges> {
                           builder: (context) => const Scaffold()));
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.orange,
+                      backgroundColor: Colors.orange,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -190,20 +190,20 @@ class _ChallengesState extends State<Challenges> {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               height: 400,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: GridView.builder(
                   scrollDirection: Axis.horizontal,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 8.0,
                     mainAxisSpacing: 8.0,
                   ),
                   itemCount: 6, // Adjust the number of cards as needed
                   itemBuilder: (context, index) {
-                    return ChallengeCard();
+                    return const ChallengeCard();
                   },
                 ),
               ),
@@ -216,6 +216,8 @@ class _ChallengesState extends State<Challenges> {
 }
 
 class ChallengeCard extends StatelessWidget {
+  const ChallengeCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -227,17 +229,17 @@ class ChallengeCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               alignment: Alignment.topLeft,
               child: Image.asset(
                 "assets/cloud.png",
                 height: 60,
                 width: 60,
               )),
-          Expanded(
+          const Expanded(
             child: Center(
               child: Text(
-                'Challenge Title',
+                'Use solar energy for a whole week',
                 style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
@@ -251,7 +253,6 @@ class ChallengeCard extends StatelessWidget {
               onPressed: () {
                 // Add your logic for joining the challenge
               },
-              child: Text('Join Challenge'),
               style: ButtonStyle(
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
@@ -259,6 +260,7 @@ class ChallengeCard extends StatelessWidget {
                   ),
                 ),
               ),
+              child: const Text('Join Challenge'),
             ),
           ),
         ],

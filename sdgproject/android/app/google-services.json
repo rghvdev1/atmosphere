@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "901381149626",
+    "project_id": "atmosphere-f11e5",
+    "storage_bucket": "atmosphere-f11e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901381149626:android:d1656952b249bca9b00383",
+        "android_client_info": {
+          "package_name": "com.example.sdgproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlNuursM_GJ6e9LJcd6q9rwI4K5zOJ5rY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -23,7 +23,7 @@ class _ProfileState extends State<Profile> {
         elevation: 0.0,
         actions: [
           IconButton(
-            icon: Icon(Icons.logout),
+            icon: const Icon(Icons.logout),
             onPressed: () {},
           )
         ],
@@ -31,14 +31,11 @@ class _ProfileState extends State<Profile> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Positioned(
-              top: 150.0, // (background container size) - (circle height / 2)
-              child: Container(
-                height: 150.0,
-                width: 150.0,
-                decoration: const BoxDecoration(
-                    shape: BoxShape.circle, color: Colors.green),
-              ),
+            Container(
+              height: 150.0,
+              width: 150.0,
+              decoration: const BoxDecoration(
+                  shape: BoxShape.circle, color: Colors.green),
             ),
             const SizedBox(height: 25),
             const Center(
